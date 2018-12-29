@@ -50,17 +50,17 @@ class App extends Component {
   loadImages = () => { //api isteği yapılır
     Axios({
       method: 'get',
-      url: 'https://api.unsplash.com/search/photos',
+      url: 'https://api.unsplash.com/photos/random',
       params: {
         client_id: 'c6247455a0aefef5dcb6858a1e1e49df53c4260a8b27b1dd27b5be0ffedcf2f6',
         collections: this.state.collection,
         query: this.state.query,
-        per_page: 30,
+        count: 30,
       }
     })
     .then(reponse => {
       console.log(reponse);
-      this.setState({imgList: reponse.data.results});
+      this.setState({imgList: reponse.data});
     })
     .catch(err => {
       //error ekranı burada olabilir

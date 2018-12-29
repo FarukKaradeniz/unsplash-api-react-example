@@ -165,3 +165,8 @@
     text-decoration: none;
     color: #2A2B8D;
 }
+
+.gmap {
+    width: 100%;
+    height: 300px;
+}

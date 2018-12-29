@@ -13,8 +13,10 @@ export default class ImageView extends React.Component {
     let style = {'height' : `${newHeight}px`};
     return(
       <React.Fragment>
-        <a href={`#${this.props.view.id}`}><img src={this.props.view.url} style={style} key={this.props.view.url} alt="Yükleniyor"/></a>
-        <Detail id={this.props.view.id} rawImage={this.props.view.download} user={this.props.user} />
+        <a href={`#${this.props.view.id}`}>
+          <img src={this.props.view.url} style={style} key={this.props.view.url} alt="Yükleniyor"/>
+        </a>
+        <Detail location={this.props.view.location} id={this.props.view.id} rawImage={this.props.view.download} user={this.props.user} />
       </React.Fragment>      
     );
 

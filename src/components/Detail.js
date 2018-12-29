@@ -1,5 +1,7 @@
 import React from 'react';
 
+import GoogleMap from './GoogleMap';
+
 import '../resources/styles/Detail.css';
 
 export default class Detail extends React.Component {
@@ -30,7 +32,11 @@ export default class Detail extends React.Component {
                 <a href={this.props.rawImage} download>Download</a>
               </div>
             </div>
-            
+              {this.props.location && 
+                this.props.location.latitude && 
+                this.props.location.longitude &&
+                <GoogleMap className="gmap" lat={this.props.location.latitude} lng={this.props.location.longitude} />
+              }
           </div>
         </div>
       </div>
