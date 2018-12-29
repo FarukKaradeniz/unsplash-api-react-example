@@ -1,0 +1,113 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 50px auto;
+    padding: 25px 25px 30px 25px;
+    background: #fff;
+    border-radius: 10px;
+    width: 740px;
+    position: relative;
+    overflow: auto;
+}
+
+.popup .close {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: red;
+}
+
+.popup .image-content {
+    height: 40%;
+    overflow: auto;
+}
+  
+.image {
+    border-radius: 4px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.user-info {
+    float: left;
+    margin-top: 30px;
+    height: 70px;
+    width: 220px;
+}
+
+.profile-photo {
+    float: left;
+    border-radius: 50%;
+    max-width: 60px;
+    max-height: 60px;
+    margin-top: 9px;
+}
+
+.user-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 1em;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.user-username {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    color: #2A2B8D;
+    font-size: 0.8em;
+    padding: 0px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.download-button {
+    float: right;
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+    padding: 14px;
+    background: #FFFFFF;
+    border: 2px solid #2A2B8D;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 20px;
+    color: #2A2B8D;
+}
+
+.download-button::before {
+    margin-right: 30px;
+    content: url("../images/download-arrow.png");
+  }
