@@ -4,7 +4,7 @@ import {Gmaps, Marker} from 'react-gmaps';
 const params = {v: '3.exp', key: 'AIzaSyAsNHZgBXAfmQkmaxOARv1rGb9Pa_hjqLg'};
  
 export default class GoogleMap extends React.Component {
- onMapCreated(map) {
+  onMapCreated(map) {
     map.setOptions({
       disableDefaultUI: true
     });

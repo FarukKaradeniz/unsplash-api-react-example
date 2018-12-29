@@ -12,7 +12,7 @@ export default class Detail extends React.Component {
         <div className="popup-dialog">
           <div className="popup-content">
             <div className="image-content">
-              <img className="image" src={this.props.rawImage} alt="Hata" />
+              <img className="image" src={this.props.smallImage} alt="Hata" />
             </div>
             <div className="user-and-download">
               <div className="user-info">
