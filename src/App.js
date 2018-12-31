@@ -27,6 +27,7 @@ class App extends Component {
       query: '', 
       collectionName: 'Collections',
       collection: -1, // yani -1 ile başlar
+      currentPage: 1,
     }
   }
 
@@ -52,11 +53,12 @@ class App extends Component {
       method: 'get',
       url: 'https://api.unsplash.com/search/photos',
       params: {
-        // client_id: '4207199fdd3a75e974b6da10050b17abb8eb576fbeb023de2486ea4c1c42313e', //2.hesap 
-        client_id: 'c6247455a0aefef5dcb6858a1e1e49df53c4260a8b27b1dd27b5be0ffedcf2f6',
+        client_id: '4207199fdd3a75e974b6da10050b17abb8eb576fbeb023de2486ea4c1c42313e', //2.hesap 
+        // client_id: 'c6247455a0aefef5dcb6858a1e1e49df53c4260a8b27b1dd27b5be0ffedcf2f6',
         collections: this.state.collection,
         query: this.state.query,
         per_page: 15,
+        page: this.state.currentPage,
       }
     })
     .then(reponse => {
@@ -67,6 +69,22 @@ class App extends Component {
       //error ekranı burada olabilir
       console.log(err);
     })
+  }
+
+  onNextClick = () => {
+    let nextPage = this.state.currentPage + 1;
+    this.setState({
+      currentPage: nextPage,
+    });
+    this.loadImages();
+  }
+
+  onPrevClick = () => {
+    let nextPage = this.state.currentPage - 1;
+    this.setState({
+      currentPage: nextPage,
+    });
+    this.loadImages();
   }
   
   render() {
@@ -84,6 +102,9 @@ class App extends Component {
           <Content 
             visibility={this.state.search_made!=='' ? "block" : "none"} 
             data={this.state.imgList}
+            currentPage={this.state.currentPage}  
+            onPrevClick={this.onPrevClick}
+            onNextClick={this.onNextClick}
           />
       </div>
     );
