@@ -15,7 +15,17 @@ const selectOptionList = [
     name: "Nature",
     id: 158642,
     selected: false,
-  }
+  },
+  {
+    name: "Wallpapers",
+    id: 1610448,
+    selected: false,
+  },
+  {
+    name: "Architecture",
+    id: 589982,
+    selected: false,
+  },
 ];
 
 class App extends Component {
