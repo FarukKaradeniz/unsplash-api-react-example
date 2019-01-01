@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: auto;
 }
 
 .header-logo-wrapper {
@@ -117,6 +118,7 @@
     min-width: 100%;
     flex-direction: row;
     box-sizing: border-box;
+    overflow: unset;
 }
 
 .inline-header-logo-wrapper {
